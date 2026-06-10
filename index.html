@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Ravi | Cloud Engineer & Data Analytics Enthusiast</title>
+  <meta name="description" content="Personal portfolio of Ravi — Aspiring Cloud Engineer, Data Analytics Enthusiast, and Freelancer. Explore projects, skills, certifications, and services." />
+  <meta name="keywords" content="Ravi, Cloud Engineer, Data Analytics, AWS, Python, SQL, Power BI, Portfolio" />
+  <meta name="author" content="Ravi" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ravi | Cloud Engineer & Data Analytics" />
+  <meta property="og:description" content="Portfolio of Ravi — Cloud, Data, and Freelance services." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Remix Icons (open source) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="Ravi — Home">
+        <span class="logo-bracket">&lt;</span>Ravi<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home"          class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"         class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"        class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"      class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
+        <li><a href="#education"     class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#services"      class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#contact"       class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dark / Light toggle -->
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle dark/light mode">
+          <i class="ri-sun-line" id="themeIcon"></i>
+        </button>
+
+        <!-- Hamburger for mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         1. HERO SECTION
+    ============================================================ -->
+    <section id="home" class="hero section" aria-label="Introduction">
+      <!-- Ambient background particles -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="particle" style="--x:15%;--y:20%;--s:3px;--d:0s"></div>
+        <div class="particle" style="--x:80%;--y:10%;--s:2px;--d:1.2s"></div>
+        <div class="particle" style="--x:50%;--y:80%;--s:4px;--d:0.6s"></div>
+        <div class="particle" style="--x:90%;--y:60%;--s:2px;--d:2s"></div>
+        <div class="particle" style="--x:25%;--y:70%;--s:3px;--d:1.8s"></div>
+        <div class="particle" style="--x:60%;--y:30%;--s:2px;--d:0.3s"></div>
+        <div class="grid-overlay"></div>
+      </div>
+
+      <div class="hero-inner">
+        <!-- Profile image -->
+        <div class="hero-image-wrap reveal" data-delay="0">
+          <div class="hero-image-ring" aria-hidden="true"></div>
+          <div class="hero-image-ring ring2" aria-hidden="true"></div>
+          <img
+            src="assets/profile.jpg"
+            alt="Portrait of Ravi"
+            class="hero-image"
+            loading="eager"
+            onerror="this.src='https://api.dicebear.com/8.x/initials/svg?seed=Ravi&backgroundColor=0f4c8a&fontSize=40&fontFamily=Space%20Grotesk'"
+          />
+          <div class="status-badge" aria-label="Status: Open to work">
+            <span class="status-dot" aria-hidden="true"></span> Open to Work
+          </div>
+        </div>
+
+        <!-- Text content -->
+        <div class="hero-text">
+          <p class="hero-eyebrow reveal" data-delay="100">Hello, I'm</p>
+          <h1 class="hero-name reveal" data-delay="200">Ravi</h1>
+
+          <!-- Typing animation container -->
+          <div class="hero-tagline reveal" data-delay="300" aria-live="polite">
+            <span id="typingText"></span><span class="cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-intro reveal" data-delay="400">
+            I bridge cloud infrastructure and data intelligence — designing scalable AWS environments,
+            uncovering insights through analytics, and building digital experiences that solve real problems.
+            Currently exploring the intersection of cloud, data, and automation.
+          </p>
+
+          <div class="hero-cta reveal" data-delay="500">
+            <!-- Replace href with your actual resume PDF path -->
+            <a href="assets/Ravi_Resume.pdf" download class="btn btn-primary">
+              <i class="ri-download-line" aria-hidden="true"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="ri-mail-send-line" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="hero-stats reveal" data-delay="600" role="list">
+            <div class="stat" role="listitem">
+              <span class="stat-num">8+</span>
+              <span class="stat-label">Skills Mastered</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat" role="listitem">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat" role="listitem">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-line" aria-hidden="true"></div>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         2. ABOUT SECTION
+    ============================================================ -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Get to Know Me</span>
+          <h2 id="about-heading" class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: image card -->
+          <div class="about-image-card reveal" data-delay="100">
+            <img
+              src="assets/about.jpg"
+              alt="Ravi working"
+              class="about-img"
+              loading="lazy"
+              onerror="this.src='https://api.dicebear.com/8.x/initials/svg?seed=Ravi+About&backgroundColor=1a3a6b&fontSize=36'"
+            />
+            <div class="about-tag-cloud" aria-hidden="true">
+              <span class="tag">☁️ Cloud</span>
+              <span class="tag">📊 Analytics</span>
+              <span class="tag">🐍 Python</span>
+              <span class="tag">🗄️ SQL</span>
+            </div>
+          </div>
+
+          <!-- Right: text -->
+          <div class="about-content">
+            <div class="about-block reveal" data-delay="150">
+              <h3 class="about-subtitle"><i class="ri-user-3-line" aria-hidden="true"></i> Professional Summary</h3>
+              <p>
+                I'm a passionate and detail-oriented tech enthusiast with a strong foundation in
+                cloud computing, data analytics, and web technologies. My journey began with a deep
+                curiosity about how data-driven decisions and cloud infrastructure can transform businesses.
+              </p>
+            </div>
+
+            <div class="about-block reveal" data-delay="200">
+              <h3 class="about-subtitle"><i class="ri-compass-3-line" aria-hidden="true"></i> Career Goals</h3>
+              <p>
+                I aim to become a certified AWS Solutions Architect and a proficient Data Analyst —
+                designing resilient cloud architectures and building interactive dashboards that turn
+                raw data into business intelligence. Long-term, I aspire to lead cloud transformation
+                initiatives for mid-scale organizations.
+              </p>
+            </div>
+
+            <div class="about-block reveal" data-delay="250">
+              <h3 class="about-subtitle"><i class="ri-award-line" aria-hidden="true"></i> Personal Strengths</h3>
+              <ul class="strengths-list">
+                <li><i class="ri-checkbox-circle-line" aria-hidden="true"></i> Fast learner who adapts quickly to new technologies</li>
+                <li><i class="ri-checkbox-circle-line" aria-hidden="true"></i> Strong analytical and problem-solving mindset</li>
+                <li><i class="ri-checkbox-circle-line" aria-hidden="true"></i> Collaborative team player with clear communication</li>
+                <li><i class="ri-checkbox-circle-line" aria-hidden="true"></i> Consistent attention to detail and quality output</li>
+                <li><i class="ri-checkbox-circle-line" aria-hidden="true"></i> Self-motivated with a growth-first attitude</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. SKILLS SECTION
+    ============================================================ -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What I Work With</span>
+          <h2 id="skills-heading" class="section-title">Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- SKILL CARDS — edit level (0–100) and icon -->
+          <div class="skill-card glass reveal" data-delay="0">
+            <div class="skill-icon" style="--c:#FF9900"><i class="ri-cloud-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Cloud Computing</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Cloud Computing proficiency 80%">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="50">
+            <div class="skill-icon" style="--c:#FF9900"><i class="ri-server-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">AWS</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="AWS proficiency 75%">
+                <div class="skill-fill" style="--w:75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="100">
+            <div class="skill-icon" style="--c:#FCC624"><i class="ri-terminal-box-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Linux</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Linux proficiency 70%">
+                <div class="skill-fill" style="--w:70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="150">
+            <div class="skill-icon" style="--c:#217346"><i class="ri-file-excel-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Excel</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Excel proficiency 85%">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="200">
+            <div class="skill-icon" style="--c:#4A90D9"><i class="ri-bar-chart-2-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Data Analytics</span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Data Analytics proficiency 78%">
+                <div class="skill-fill" style="--w:78%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="250">
+            <div class="skill-icon" style="--c:#336791"><i class="ri-database-2-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">SQL</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency 80%">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="300">
+            <div class="skill-icon" style="--c:#3776AB"><i class="ri-code-s-slash-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">72%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 72%">
+                <div class="skill-fill" style="--w:72%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="350">
+            <div class="skill-icon" style="--c:#F05032"><i class="ri-git-branch-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Git and GitHub proficiency 75%">
+                <div class="skill-fill" style="--w:75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-delay="400">
+            <div class="skill-icon" style="--c:#F2C811"><i class="ri-pie-chart-2-line"></i></div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Power BI</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Power BI proficiency 70%">
+                <div class="skill-fill" style="--w:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. PROJECTS SECTION
+    ============================================================ -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What I've Built</span>
+          <h2 id="projects-heading" class="section-title">Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT CARD — duplicate and edit as needed -->
+          <article class="project-card glass reveal" data-delay="0">
+            <div class="project-img-wrap">
+              <img src="assets/project1.jpg" alt="AWS Cost Analytics Dashboard screenshot" loading="lazy"
+                onerror="this.src='https://placehold.co/600x340/0d1b3e/4A90D9?text=AWS+Cost+Analytics'" />
+              <div class="project-overlay">
+                <a href="https://github.com/yourusername/project1" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View AWS project on GitHub">
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View live demo">
+                  <i class="ri-external-link-line"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AWS Cost Analytics Dashboard</h3>
+              <p class="project-desc">
+                Built an automated AWS cost monitoring pipeline using Lambda, CloudWatch, and S3.
+                Data is visualized in Power BI, helping teams reduce cloud spend by identifying unused resources.
+              </p>
+              <ul class="tech-tags" aria-label="Technologies used">
+                <li>AWS Lambda</li>
+                <li>S3</li>
+                <li>Power BI</li>
+                <li>Python</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-delay="100">
+            <div class="project-img-wrap">
+              <img src="assets/project2.jpg" alt="Sales Analytics Report screenshot" loading="lazy"
+                onerror="this.src='https://placehold.co/600x340/0d1b3e/4A90D9?text=Sales+Analytics'" />
+              <div class="project-overlay">
+                <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View Sales Analytics on GitHub">
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View live demo">
+                  <i class="ri-external-link-line"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Sales Analytics Report</h3>
+              <p class="project-desc">
+                End-to-end data analysis pipeline using Python (Pandas, Matplotlib) and SQL,
+                processing 50k+ records to deliver actionable sales insights with an interactive Excel dashboard.
+              </p>
+              <ul class="tech-tags" aria-label="Technologies used">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Excel</li>
+                <li>Pandas</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-delay="200">
+            <div class="project-img-wrap">
+              <img src="assets/project3.jpg" alt="Linux Server Automation screenshot" loading="lazy"
+                onerror="this.src='https://placehold.co/600x340/0d1b3e/4A90D9?text=Linux+Server+Automation'" />
+              <div class="project-overlay">
+                <a href="https://github.com/yourusername/project3" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View Linux project on GitHub">
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View live demo">
+                  <i class="ri-external-link-line"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Linux Server Automation</h3>
+              <p class="project-desc">
+                Developed Bash scripts to automate user provisioning, log rotation, and system health
+                checks on Ubuntu servers. Reduced manual maintenance time by over 60%.
+              </p>
+              <ul class="tech-tags" aria-label="Technologies used">
+                <li>Linux</li>
+                <li>Bash</li>
+                <li>Cron</li>
+                <li>Shell Scripting</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-delay="300">
+            <div class="project-img-wrap">
+              <img src="assets/project4.jpg" alt="Portfolio Website screenshot" loading="lazy"
+                onerror="this.src='https://placehold.co/600x340/0d1b3e/4A90D9?text=Portfolio+Website'" />
+              <div class="project-overlay">
+                <a href="https://github.com/yourusername/portfolio" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View portfolio on GitHub">
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="overlay-btn" aria-label="View live demo">
+                  <i class="ri-external-link-line"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                Designed and developed this responsive, glassmorphism-styled portfolio using vanilla HTML,
+                CSS and JavaScript — deployed on GitHub Pages with zero frameworks.
+              </p>
+              <ul class="tech-tags" aria-label="Technologies used">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>GitHub Pages</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. CERTIFICATIONS SECTION
+    ============================================================ -->
+    <section id="certifications" class="section section-alt" aria-labelledby="certs-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Credentials</span>
+          <h2 id="certs-heading" class="section-title">Certifications</h2>
+        </div>
+
+        <div class="certs-grid">
+
+          <div class="cert-card glass reveal" data-delay="0">
+            <div class="cert-badge" aria-hidden="true"><i class="ri-award-fill"></i></div>
+            <div class="cert-body">
+              <h3 class="cert-title">AWS Cloud Practitioner</h3>
+              <p class="cert-org"><i class="ri-building-line" aria-hidden="true"></i> Amazon Web Services</p>
+              <p class="cert-date"><i class="ri-calendar-line" aria-hidden="true"></i> Expected 2025</p>
+              <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer">View Credential <i class="ri-external-link-line" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="cert-card glass reveal" data-delay="100">
+            <div class="cert-badge" aria-hidden="true"><i class="ri-medal-fill"></i></div>
+            <div class="cert-body">
+              <h3 class="cert-title">Google Data Analytics</h3>
+              <p class="cert-org"><i class="ri-building-line" aria-hidden="true"></i> Google / Coursera</p>
+              <p class="cert-date"><i class="ri-calendar-line" aria-hidden="true"></i> 2024</p>
+              <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer">View Credential <i class="ri-external-link-line" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="cert-card glass reveal" data-delay="200">
+            <div class="cert-badge" aria-hidden="true"><i class="ri-shield-star-fill"></i></div>
+            <div class="cert-body">
+              <h3 class="cert-title">Microsoft Power BI Data Analyst</h3>
+              <p class="cert-org"><i class="ri-building-line" aria-hidden="true"></i> Microsoft</p>
+              <p class="cert-date"><i class="ri-calendar-line" aria-hidden="true"></i> 2024</p>
+              <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer">View Credential <i class="ri-external-link-line" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="cert-card glass reveal" data-delay="300">
+            <div class="cert-badge" aria-hidden="true"><i class="ri-code-box-fill"></i></div>
+            <div class="cert-body">
+              <h3 class="cert-title">Python for Everybody</h3>
+              <p class="cert-org"><i class="ri-building-line" aria-hidden="true"></i> University of Michigan / Coursera</p>
+              <p class="cert-date"><i class="ri-calendar-line" aria-hidden="true"></i> 2023</p>
+              <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer">View Credential <i class="ri-external-link-line" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. EDUCATION TIMELINE
+    ============================================================ -->
+    <section id="education" class="section" aria-labelledby="edu-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Academic Journey</span>
+          <h2 id="edu-heading" class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline" role="list">
+
+          <div class="timeline-item reveal" data-delay="0" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"><i class="ri-graduation-cap-fill"></i></div>
+            <div class="timeline-content glass">
+              <span class="timeline-year">2022 – 2025</span>
+              <h3 class="timeline-title">Bachelor of Science — Computer Science</h3>
+              <p class="timeline-org">Your University Name, City</p>
+              <p class="timeline-desc">
+                Focused on cloud infrastructure, data structures, database management, and software engineering.
+                Graduated with distinction. Completed final-year project on AWS-based data pipelines.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-delay="150" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"><i class="ri-book-3-fill"></i></div>
+            <div class="timeline-content glass">
+              <span class="timeline-year">2020 – 2022</span>
+              <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+              <p class="timeline-org">Your School Name, City</p>
+              <p class="timeline-desc">
+                Commerce stream with Computer Science elective.
+                Scored 88% — developed early interest in programming and data management.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-delay="300" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"><i class="ri-pencil-ruler-2-fill"></i></div>
+            <div class="timeline-content glass">
+              <span class="timeline-year">2018 – 2020</span>
+              <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
+              <p class="timeline-org">Your School Name, City</p>
+              <p class="timeline-desc">
+                Science stream. Achieved 92%. First experience writing BASIC programs
+                in the school computer lab sparked a lifelong passion for technology.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. SERVICES SECTION
+    ============================================================ -->
+    <section id="services" class="section section-alt" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What I Offer</span>
+          <h2 id="services-heading" class="section-title">Services</h2>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card glass reveal" data-delay="0">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <i class="ri-bar-chart-grouped-line"></i>
+            </div>
+            <h3 class="service-title">Data Analytics</h3>
+            <p class="service-desc">
+              Transform raw datasets into actionable insights using Python, SQL, and Power BI —
+              from cleaning and analysis to interactive dashboards.
+            </p>
+            <ul class="service-features">
+              <li>Exploratory Data Analysis</li>
+              <li>Dashboard Development</li>
+              <li>Statistical Reporting</li>
+            </ul>
+          </div>
+
+          <div class="service-card glass reveal" data-delay="100">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <i class="ri-layout-masonry-line"></i>
+            </div>
+            <h3 class="service-title">Website Development</h3>
+            <p class="service-desc">
+              Clean, responsive, and fast websites built with modern HTML/CSS/JS.
+              From landing pages to full portfolio sites optimized for performance and SEO.
+            </p>
+            <ul class="service-features">
+              <li>Responsive UI/UX Design</li>
+              <li>GitHub Pages Deployment</li>
+              <li>Performance Optimization</li>
+            </ul>
+          </div>
+
+          <div class="service-card glass reveal" data-delay="200">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <i class="ri-megaphone-line"></i>
+            </div>
+            <h3 class="service-title">Digital Marketing</h3>
+            <p class="service-desc">
+              Grow your online presence with data-backed strategies — content planning,
+              social media management, and analytics-driven campaign reporting.
+            </p>
+            <ul class="service-features">
+              <li>Social Media Strategy</li>
+              <li>Performance Analytics</li>
+              <li>Content Scheduling</li>
+            </ul>
+          </div>
+
+          <div class="service-card glass reveal" data-delay="300">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <i class="ri-palette-line"></i>
+            </div>
+            <h3 class="service-title">Poster Design</h3>
+            <p class="service-desc">
+              Eye-catching posters, banners, and social creatives for events, brands,
+              and campaigns using Canva and design principles that drive engagement.
+            </p>
+            <ul class="service-features">
+              <li>Event Posters</li>
+              <li>Social Media Banners</li>
+              <li>Brand Graphics</li>
+            </ul>
+          </div>
+
+          <div class="service-card glass reveal" data-delay="400">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <i class="ri-film-line"></i>
+            </div>
+            <h3 class="service-title">Video Editing</h3>
+            <p class="service-desc">
+              Professional short-form video editing for YouTube, Instagram Reels, and
+              promotional content — transitions, color grading, captions, and more.
+            </p>
+            <ul class="service-features">
+              <li>Short-Form Content</li>
+              <li>Color Grading</li>
+              <li>Motion Text & Captions</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         8. CONTACT SECTION
+    ============================================================ -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Let's Connect</span>
+          <h2 id="contact-heading" class="section-title">Contact Me</h2>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact info -->
+          <div class="contact-info reveal" data-delay="0">
+            <p class="contact-intro">
+              Got a project idea, a question, or just want to say hi?
+              Drop me a message — I typically respond within 24 hours.
+            </p>
+
+            <ul class="contact-details" role="list">
+              <li>
+                <a href="mailto:ravi@example.com" class="contact-item">
+                  <span class="contact-icon" aria-hidden="true"><i class="ri-mail-line"></i></span>
+                  <span>
+                    <strong>Email</strong>
+                    <!-- Replace with your actual email -->
+                    <span>ravi@example.com</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+919876543210" class="contact-item">
+                  <span class="contact-icon" aria-hidden="true"><i class="ri-phone-line"></i></span>
+                  <span>
+                    <strong>Phone</strong>
+                    <!-- Replace with your actual phone -->
+                    <span>+91 98765 43210</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <div class="contact-item">
+                  <span class="contact-icon" aria-hidden="true"><i class="ri-map-pin-line"></i></span>
+                  <span>
+                    <strong>Location</strong>
+                    <!-- Replace with your actual location -->
+                    <span>Puducherry, India</span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Social media icons -->
+            <div class="social-links" role="list" aria-label="Social media profiles">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub profile" role="listitem">
+                <i class="ri-github-fill"></i>
+              </a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn profile" role="listitem">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter / X profile" role="listitem">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile" role="listitem">
+                <i class="ri-instagram-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div class="contact-form-wrap reveal" data-delay="150">
+            <form id="contactForm" class="glass contact-form" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="nameInput">Your Name</label>
+                <input type="text" id="nameInput" name="name" placeholder="Ravi Kumar" required autocomplete="name" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="emailInput">Email Address</label>
+                <input type="email" id="emailInput" name="email" placeholder="you@example.com" required autocomplete="email" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="subjectInput">Subject</label>
+                <input type="text" id="subjectInput" name="subject" placeholder="Project collaboration" />
+              </div>
+              <div class="form-group">
+                <label for="messageInput">Message</label>
+                <textarea id="messageInput" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn-primary w-full">
+                <i class="ri-send-plane-line" aria-hidden="true"></i> Send Message
+              </button>
+              <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" aria-label="Back to top">
+          <span class="logo-bracket">&lt;</span>Ravi<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>Aspiring Cloud Engineer & Data Analytics Enthusiast, crafting digital solutions from Puducherry, India.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <h4>Find Me</h4>
+        <div class="social-links" role="list" aria-label="Social links">
+          <a href="https://github.com/yourusername"    target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub" role="listitem"><i class="ri-github-fill"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn" role="listitem"><i class="ri-linkedin-fill"></i></a>
+          <a href="https://twitter.com/yourusername"   target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter / X" role="listitem"><i class="ri-twitter-x-fill"></i></a>
+          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram" role="listitem"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="year"></span> Ravi. Built with
+        <span aria-label="love">❤️</span> and deployed on
+        <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+    <i class="ri-arrow-up-line" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
